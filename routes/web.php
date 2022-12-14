@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        'headerList' => [
+            'page1',
+            'page2',
+            'page3',
+            'page4'
+        ],
+        'homePagelink' => 'Return to Home'
+    ];
+    return view('home', $data);
 })->name('home');
