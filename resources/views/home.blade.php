@@ -9,6 +9,19 @@
     <style>
         .navbar {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        li {
+            margin-right: 1rem;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -18,7 +31,7 @@
         <div class="navbar">
             <ul>
                 @foreach($headerList as $link)
-                <li><a href="">{{ $link }}</a></li>
+                <li><a href="/{{ $link }} ">{{ $link }}</a></li>
                 @endforeach
             </ul>
         </div>
